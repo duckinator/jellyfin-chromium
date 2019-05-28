@@ -1,0 +1,9 @@
+- name: Update repo cache and install chromium
+  apt:
+    name: chromium-browser
+    update_cache: yes
+
+- name: Add jellyfin.sh script
+  synchronize:
+    src: jellyfin-client.sh
+    dest: /usr/local/bin/jellyfin-client.sh

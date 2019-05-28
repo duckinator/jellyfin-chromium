@@ -7,14 +7,8 @@ A pile of kludges for running the Jellyfin web client fullscreen on a Raspbian s
 In theory, you can just do this:
 
 1. Set up a Raspbian system.
-2. Add an automagically-logged-in user.
-3. Run the code mentioned below.
+2. Add a non-root user.
+3. Make them automagically log in.
+2. `apt install -y ansible && ansible-pull https://github.com/duckinator/jellyfin-chromium.git playbook.yml`
 4. Add `/path/to/jellyfin.sh` to the list of things ran at login.
-5. Reboot because I'm lazy.
 
-Code to run for step 3:
-
-```
-cd ~ && git clone https://github.com/duckinator/jellyfin-chromium.git &&
-cd jellyfin-chromium && ./setup.py
-```
