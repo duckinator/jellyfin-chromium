@@ -2,8 +2,10 @@
   apt:
     name: chromium-browser
     update_cache: yes
+  become: true
 
 - name: Add jellyfin.sh script
   synchronize:
     src: jellyfin-client.sh
     dest: /usr/local/bin/jellyfin-client.sh
+  become: true
