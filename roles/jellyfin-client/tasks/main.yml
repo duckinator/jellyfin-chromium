@@ -15,3 +15,9 @@
     src: jellyfin-client.desktop
     dest: /etc/xdg/autostart/jellyfin-client.desktop
   become: true
+
+- name: Restart the system
+  shell: sleep 2 && shutdown -r now "Ansible-initiated reboot"
+  async: 1
+  poll: 0
+  ignore_errors: true
