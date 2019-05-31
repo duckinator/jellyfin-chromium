@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=application
+Name=jellyfin-client
+Exec=bash /usr/local/bin/jellyfin-client.sh

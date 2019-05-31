@@ -4,8 +4,14 @@
     update_cache: yes
   become: true
 
-- name: Add jellyfin.sh script
+- name: Add jellyfin-client.sh script
   synchronize:
     src: jellyfin-client.sh
     dest: /usr/local/bin/jellyfin-client.sh
+  become: true
+
+- name: Add jellyfin-client.desktop
+  synchronize:
+    src: jellyfin-client.desktop
+    dest: /etc/xdg/autostart/jellyfin-client.desktop
   become: true
